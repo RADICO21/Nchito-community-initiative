@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ways to Support - Nchito Community Initiative</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #007BFF;
+      --primary-dark-blue: #0056b3;
+      --primary-yellow: #FFC107;
+      --primary-dark-yellow: #e0a800;
+      --zambian-green: #198754;
+      --zambian-red: #dc3545;
+      --zambian-black: #212529;
+      --zambian-orange: #fd7e14;
+      --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --medium-gray: #e9ecef;
+      --dark-gray: #343a40;
+      --text-dark: #212529;
+      --text-light: #6c757d;
+      --emergency-red: #dc3545;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body, html {
+      font-family: 'Open Sans', Arial, sans-serif;
+      scroll-behavior: smooth;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: var(--light-gray);
+    }
+
+    /* Header Styles */
+    .main-header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo img {
+      height: 50px;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 25px;
+    }
+    
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-blue);
+    }
+    
+    .donate-btn {
+      background-color: var(--primary-yellow);
+      color: var(--text-dark);
+      border: none;
+      padding: 10px 19px;
+      border-radius: 4px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-left: 15px;
+    }
+    
+    .donate-btn:hover {
+      background-color: var(--primary-dark-yellow);
+      transform: translateY(-2px);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary-blue);
+    }
+
+    /* Hero Section */
+    .support-hero {
+      position: relative;
+      height: 400px;
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 123, 255, 0.9),
+          rgba(0, 91, 187, 0.9)
+        ), url('images/support-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+    
+     .hero-banner support-hero {
+      position: relative;
+      height: 400px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/');
+      background-position: center;
+      display: flex;
+      align-items: center;
+     }
+    
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+      margin: 0 auto;
+      color: var(--white);
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+    
+    .blue-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: var(--primary-blue);
+      clip-path: polygon(0 70%, 100% 30%, 100% 100%, 0% 100%);
+    }
+
+    /* Section Styles */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-blue);
+    }
+    
+    .section-title p {
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .section-title i {
+      margin-right: 10px;
+    }
+
+    /* Monthly Donor Club */
+    .program-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .program-card {
+      background-color: var(--white);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+      border-top: 4px solid var(--primary-blue);
+      text-align: center;
+    }
+    
+    .program-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-blue);
+    }
+    
+    .program-card .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--zambian-green);
+      margin: 15px 0;
+    }
+    
+    .program-card ul {
+      list-style: none;
+      margin: 20px 0;
+      text-align: left;
+    }
+    
+    .program-card li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .program-card li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--primary-blue);
+    }
+
+    /* Program Sponsorship */
+    .tabs {
+      margin-top: 30px;
+    }
+    
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+      padding: 12px 25px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 0 5px 10px;
+    }
+    
+    .tab-btn:hover,
+    .tab-btn.active {
+      color: var(--primary-blue);
+      border-bottom: 3px solid var(--primary-blue);
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .mission-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .mission-text h3 {
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+      margin-bottom: 20px;
+    }
+    
+    .donation-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .donation-option {
+      background-color: var(--white);
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+      border-left: 4px solid transparent;
+      text-align: center;
+    }
+    
+    .donation-option:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid var(--primary-blue);
+    }
+    
+    .mission-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Partners Section */
+    .partner-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .partner-card {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .partner-card img {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial {
+      margin-top: 20px;
+    }
+    
+    .testimonial blockquote {
+      font-style: italic;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    
+    .testimonial p {
+      font-weight: 600;
+      color: var(--primary-blue);
+    }
+    
+    .become-partner {
+      text-align: center;
+      margin-top: 50px;
+      padding: 30px;
+      background-color: var(--white);
+      border-radius: 8px;
+    }
+
+    /* Diaspora Section */
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .diaspora-card {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      border-bottom: 3px solid var(--primary-yellow);
+    }
+    
+    .member-image {
+      height: 250px;
+      overflow: hidden;
+    }
+    
+    .member-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .member-info {
+      padding: 25px;
+      text-align: center;
+    }
+    
+    .member-info h4 {
+      font-size: 1.3rem;
+      color: var(--primary-blue);
+      margin-bottom: 5px;
+    }
+    
+    .location {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+    
+    .diaspora-cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      text-align: center;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-yellow);
+      color: var(--text-dark);
+      border: 2px solid var(--primary-yellow);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark-yellow);
+      border-color: var(--primary-dark-yellow);
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--light-gray);
+      border: 2px solid var(--light-gray);
+    }
+    
+    .btn-secondary:hover {
+      background-color: rgba(0, 123, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .btn-tertiary {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      border: 2px solid var(--primary-blue);
+    }
+    
+    .btn-tertiary:hover {
+      background-color: var(--primary-dark-blue);
+      border-color: var(--primary-dark-blue);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .main-footer {
+      background-color: var(--dark-gray);
+      color: var(--white);
+      padding: 50px 20px 20px;
+      text-align: center;
+    }
+    
+    .footer-logo img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-yellow);
+    }
+    
+    .copyright {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links li {
+        margin: 10px 0;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .mission-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .mission-image {
+        order: -1;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .partner-logo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .header-container {
+        padding: 15px;
+      }
+      
+      .hero-content h1 {
+        font-size: 1.6rem;
+      }
+      
+      .tab-buttons {
+        flex-direction: column;
+      }
+      
+      .tab-btn {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        Nchito Comminity Initiative
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="support.html" class="active">Ways to Give</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <!--
+          <i class="fas fa-heart"></i> Donate
+        </button>-->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner support-hero" data-aos="fade-in">
+    <div class="hero-content">
+      <h1>Power Youth Transformation</h1>
+      <p>Choose how you want to make an impact in Zambian communities</p>
+      <div class="hero-buttons">
+        <a href="#monthly-donor" class="btn btn-primary">
+          <i class="fas fa-users"></i> Monthly Giving
+        </a>
+        <a href="#program-sponsor" class="btn btn-secondary">
+          <i class="fas fa-hand-holding-heart"></i> Sponsor a Program
+        </a>
+        <a href="#diaspora" class="btn btn-tertiary">
+          <i class="fas fa-globe-africa"></i> Diaspora Giving
+        </a>
+      </div>
+    </div>
+    <div class="blue-wave"></div>
+  </section>
+
+  <!-- Monthly Donor Club -->
+  <section id="monthly-donor" class="section-container" data-aos="fade-up">
+    <div class="section-title">
+      <h2><i class="fas fa-users"></i> Friends of Nchito</h2>
+      <p>Join our monthly donor community for sustained impact</p>
+    </div>
+    
+    <div class="program-cards">
+      <div class="program-card" data-aos="fade-up">
+        <h3><i class="fas fa-medal"></i> Bronze Circle</h3>
+        <p class="price">ZMW 100/month</p>
+        <ul>
+          <li>Monthly impact reports</li>
+          <li>Digital thank you certificate</li>
+          <li>Annual impact summary</li>
+          <li>Social media shoutout</li>
+        </ul>
+        <a href="donate.html" class="btn btn-primary">Join Now</a>
+      </div>
+      
+      <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+        <h3><i class="fas fa-star"></i> Silver Circle</h3>
+        <p class="price">ZMW 500/month</p>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Quarterly video updates</li>
+          <li>Invitation to annual donor event</li>
+          <li>Personalized thank you note</li>
+        </ul>
+        <a href="donate.html" class="btn btn-primary">Join Now</a>
+      </div>
+      
+      <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+        <h3><i class="fas fa-gem"></i> Gold Circle</h3>
+        <p class="price">ZMW 1,000/month</p>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Personalized impact stories</li>
+          <li>Recognition on our website</li>
+          <li>VIP event invitations</li>
+          <li>Opportunity to name a program</li>
+        </ul>
+        <a href="donate.html" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Sponsorship -->
+  <section id="program-sponsor" class="section-container" data-aos="fade-up">
+    <div class="section-title">
+      <h2><i class="fas fa-hand-holding-heart"></i> Sponsor a Program</h2>
+      <p>Directly fund specific initiatives that align with your passion</p>
+    </div>
+    
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="job-placement">Job Placement</button>
+        <button class="tab-btn" data-tab="mentorship">Mentorship</button>
+        <button class="tab-btn" data-tab="cleanups">Community Cleanups</button>
+        <button class="tab-btn" data-tab="skills-training">Skills Training</button>
+      </div>
+      
+      <div class="tab-content active" id="job-placement">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h3>Transform Lives Through Employment</h3>
+            <p>Your sponsorship provides critical support to help youth secure and maintain meaningful employment:</p>
+            <ul>
+              <li>Professional interview preparation workshops</li>
+              <li>Transportation to interviews for 3 months</li>
+              <li>Starter kits with work essentials</li>
+              <li>6 months of follow-up support</li>
+              <li>Employer matching services</li>
+            </ul>
+            <div class="donation-options">
+              <div class="donation-option">
+                <h4>Sponsor One Youth</h4>
+                <p class="price">ZMW 1,500</p>
+                <p>Covers full employment support for one person</p>
+                <a href="donate.html" class="btn btn-tertiary">find out how</a>
+              </div>
+              <div class="donation-option">
+                <h4>Sponsor a Workshop</h4>
+                <p class="price">ZMW 5,000</p>
+                <p>Funds a full-day training for 20 youth</p>
+                <a href="donate" class="btn btn-tertiary">find out how</a>
+              </div>
+             <!-- <div class="donation-option">
+                <h4>Custom Amount</h4>
+                <p>Any amount helps support this program</p>
+                <a href="#" class="btn btn-secondary">Donate Now</a>
+              </div>-->
+            </div>
+          </div>
+          <div class="mission-image">
+            <img src="images/1689418135418.jpeg" alt="Youth employment training session" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="mentorship">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h3>Empower Through Mentorship</h3>
+            <p>Sponsor our mentorship program that pairs youth with experienced professionals:</p>
+            <ul>
+              <li>One-on-one mentorship for 6 months</li>
+              <li>Monthly group workshops</li>
+              <li>Career guidance sessions</li>
+              <li>Networking opportunities</li>
+            </ul>
+            <div class="donation-options">
+              <div class="donation-option">
+                <h4>Sponsor a Mentor Pair</h4>
+                <p class="price">ZMW 2,000</p>
+                <p>Supports one mentor-mentee pair</p>
+                <a href="donate.html" class="btn btn-tertiary">Sponsor Now</a>
+              </div>
+              <div class="donation-option">
+                <h4>Sponsor a Workshop</h4>
+                <p class="price">ZMW 7,500</p>
+                <p>Funds a full-day workshop for 30 youth</p>
+                <a href="donate.html" class="btn btn-tertiary">Sponsor Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="mission-image">
+            <img src="images/Copilot_20250623_000051.png" alt="Mentorship session" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="cleanups">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h3>Community Cleanup Initiative</h3>
+            <p>Support our environmental programs that create cleaner communities while employing youth:</p>
+            <ul>
+              <li>Monthly community cleanup events</li>
+              <li>Waste management training</li>
+              <li>Recycling program development</li>
+              <li>Environmental education</li>
+            </ul>
+            <div class="donation-options">
+              <div class="donation-option">
+                <h4>Sponsor a Cleanup</h4>
+                <p class="price">ZMW 3,000</p>
+                <p>Funds one community cleanup event</p>
+                <a href="donate.html" class="btn btn-tertiary">Sponsor Now</a>
+              </div>
+              <div class="donation-option">
+                <h4>Sponsor a Team</h4>
+                <p class="price">ZMW 10,000</p>
+                <p>Supports a cleanup team for 3 months</p>
+                <a href="donate.html" class="btn btn-tertiary">Sponsor Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="mission-image">
+            <img src="images/Copilot_20250622_232743.png" alt="Community cleanup event" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="skills-training">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h3>Vocational Skills Training</h3>
+            <p>Fund our hands-on training programs that teach marketable skills:</p>
+            <ul>
+              <li>Carpentry and woodworking</li>
+              <li>Tailoring and fashion design</li>
+              <li>ICT and computer skills</li>
+              <li>Entrepreneurship training</li>
+            </ul>
+            <div class="donation-options">
+              <div class="donation-option">
+                <h4>Sponsor a Student</h4>
+                <p class="price">ZMW 2,500</p>
+                <p>Full 3-month training for one youth</p>
+                <a href="donate.html" class="btn btn-tertiary">Sponsor Now</a>
+              </div>
+              <div class="donation-option">
+                <h4>Sponsor a Workshop</h4>
+                <p class="price">ZMW 8,000</p>
+                <p>Funds equipment for a training workshop</p>
+                <a href="donate.html" class="btn btn-tertiary">Sponsor Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="mission-image">
+            <img src="images/Copilot_20250623_000051.png" alt="Vocational training session" data-aos="fade-left">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Section -->
+  <section class="section-container" style="background-color: var(--white);" data-aos="fade-up">
+    <div class="section-title">
+      <h2><i class="fas fa-handshake"></i> Our Partners</h2>
+      <p>Join leading organizations supporting Zambian youth</p>
+    </div>
+    
+    <div class="partner-logo-grid">
+      <div class="partner-card" data-aos="zoom-in">
+        Ministry of Youth
+        <div class="testimonial">
+          <blockquote>"Nchito's approach aligns perfectly with our national youth empowerment goals. Their programs deliver measurable results that transform communities."</blockquote>
+          <p>- Mr. James Phiri, Ministry of Youth</p>
+        </div>
+      </div>
+      
+      <div class="partner-card" data-aos="zoom-in" data-aos-delay="100">
+        Zambia Chamber of Commerce
+        <div class="testimonial">
+          <blockquote>"We've hired 15 graduates from their program - all excellent employees who bring valuable skills to our business."</blockquote>
+          <p>- Mrs. Banda, Business Owner</p>
+        </div>
+      </div>
+      
+      <div class="partner-card" data-aos="zoom-in" data-aos-delay="200">
+        UNESCO
+        <div class="testimonial">
+          <blockquote>"Nchito's vocational training model is exactly what Zambia needs to address youth unemployment. We're proud to support their work."</blockquote>
+          <p>- UNESCO Representative</p>
+        </div>
+      </div>
+      
+      <div class="partner-card" data-aos="zoom-in" data-aos-delay="300">
+        Local Business Association
+        <div class="testimonial">
+          <blockquote>"Our partnership helps us find qualified young employees while giving back to the community. It's a win-win."</blockquote>
+          <p>- Business Association Chair</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="become-partner" data-aos="fade-up">
+      <h3>Become a Corporate Partner</h3>
+      <p>Join other forward-thinking organizations making a difference through:</p>
+      <ul style="max-width: 600px; margin: 20px auto; text-align: left;">
+        <li>Employee volunteer opportunities</li>
+        <li>Sponsorship and naming rights</li>
+        <li>Workforce development programs</li>
+        <li>CSR initiatives with measurable impact</li>
+      </ul>
+      <a href="partner.html" class="btn btn-primary">Contact Us About Partnership</a>
+    </div>
+  </section>
+
+  <!-- Diaspora Spotlight -->
+  <section id="diaspora" class="section-container" data-aos="fade-up">
+    <div class="section-title">
+      <h2><i class="fas fa-globe-africa"></i> Diaspora Spotlight</h2>
+      <p>Zambians abroad making an impact back home</p>
+    </div>
+    
+    <div class="team-members">
+      <div class="team-member diaspora-card" data-aos="fade-up">
+        <div class="member-image">
+          <img src="images/Copilot_20250622_233003.png" alt="Dr. Chanda Mwamba">
+        </div>
+        <div class="member-info">
+          <h4>Dr. Chanda Mwamba</h4>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+          <p>"I sponsor 3 youth annually because I believe in paying forward my success. Seeing them thrive is my greatest reward."</p>
+         <!-- <a href="#" class="btn btn-secondary">
+            <i class="fas fa-play"></i> Watch Interview
+          </a>-->
+        </div>
+      </div>
+      
+      <div class="team-member diaspora-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-image">
+          <img src="images/Copilot_20250622_233728.png" alt="Engineer Banda">
+        </div>
+        <div class="member-info">
+          <h4>Engineer Banda</h4>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Johannesburg, SA</p>
+          <p>"My monthly donations fund the ICT lab where I got my start. It's my way of ensuring others have the same opportunities I did."</p>
+          <!-- <a href="#" class="btn btn-secondary">
+            <i class="fas fa-play"></i> Watch Interview
+          </a>-->
+        </div>
+      </div>
+      
+      <div class="team-member diaspora-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-image">
+          <img src="images/Copilot_20250622_234737.png" alt="Mrs. Kabwe">
+        </div>
+        <div class="member-info">
+          <h4>Mrs. Kabwe</h4>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Washington DC, USA</p>
+          <p>"I created a scholarship fund in my father's name to support young women in tech. His legacy lives on through their success."</p>
+         <!-- <a href="#" class="btn btn-secondary">
+            <i class="fas fa-play"></i> Watch Interview
+          </a>-->
+        </div>
+      </div>
+    </div>
+    
+    <div class="diaspora-cta" data-aos="fade-up">
+      <h3>Are you part of the Zambian diaspora?</h3>
+      <p>Connect with us to explore ways you can contribute to youth empowerment back home</p>
+      <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+        <a href="diaspora.html" class="btn btn-tertiary">
+          <i class="fas fa-info-circle"></i> Learn More
+        </a>
+        <a href="donate.html" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer" data-aos="fade-up">
+    <div class="footer-logo">
+      Nchito Community Initiative
+    </div>
+    
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="support.html">Ways to Give</a>
+      <a href="donate.html">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 Nchito Community Initiative. All rights reserved.</p>
+      <p>Registered Non-Profit Community-Based Organization in Zambia</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out'
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const isExpanded = navLinks.classList.contains('active');
+      mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Tab Functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons and content
+        tabBtns.forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        btn.classList.add('active');
+        const tabId = btn.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+<a href="index.html" class="home-float-btn" title="Return Home">
+  <i class="fas fa-home"></i>
+</a>
+
+<style>
+  .home-float-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: all 0.3s;
+  }
+  
+  .home-float-btn:hover {
+    background: var(--primary-dark-blue);
+    transform: translateY(-3px);
+  }
+</style>
+
+</body>
+</html>

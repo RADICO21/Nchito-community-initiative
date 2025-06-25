@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Mentor</title>
+  <style>
+    :root {
+      --primary-blue: #007BFF;
+      --primary-dark-blue: #0056b3;
+      --primary-yellow: #FFC107;
+      --primary-dark-yellow: #e0a800;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f5f9;
+      color: #343a40;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .form-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      color: var(--primary-blue);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background: var(--primary-blue);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: var(--primary-dark-blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Become a Mentor</h1>
+      <p>Guide the next generation of leaders in Zambia</p>
+    </div>
+
+    <form action="https://formspree.io/f/xldnwbpe" method="POST">
+      <div class="form-group">
+        <label for="full-name">Full Name *</label>
+        <input type="text" id="full-name" name="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone (WhatsApp) *</label>
+        <input type="tel" id="phone" name="Phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="expertise">Area of Expertise *</label>
+        <select id="expertise" name="Expertise" required>
+          <option value="">Select...</option>
+          <option>Career Guidance</option>
+          <option>Academic Support</option>
+          <option>Entrepreneurship</option>
+          <option>Life Skills</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="availability">Availability (hours/week)</label>
+        <input type="number" id="availability" name="Availability" min="1" max="40">
+      </div>
+
+      <div class="form-group">
+        <label for="motivation">Why do you want to be a mentor?</label>
+        <textarea id="motivation" name="Motivation" rows="4"></textarea>
+      </div>
+
+      <!-- Formspree hidden fields -->
+      <input type="hidden" name="_subject" value="New Mentor Application">
+      <input type="hidden" name="_language" value="en">
+      
+       <button type="submit" class="submit-btn">Submit Inquiry</button>
+    <style>
+      .submit-btn {
+        background-color: var(--primary-blue, #007bff);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+      .submit-btn:hover,
+      .submit-btn:focus {
+        background-color: #0056b3;
+      }
+    </style>
+    </form>
+  </div>
+</body>
+</html>

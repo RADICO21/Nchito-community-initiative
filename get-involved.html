@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>get-involved</title>
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Same base CSS */
+    .involvement-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .involvement-card {
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .involvement-card.selected {
+      border-color: var(--primary-blue);
+      background-color: rgba(0, 123, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Get Involved</h1>
+      <p>Multiple ways to support our mission</p>
+    </div>
+
+    <form action="https://formspree.io/f/xldnwbpe" method="POST">
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" name="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" name="Phone">
+      </div>
+
+      <div class="form-group">
+        <label>How would you like to help? *</label>
+        <div class="involvement-options">
+          <div class="involvement-card" data-value="Volunteer">
+            <h3>Volunteer</h3>
+            <p>Donate your time</p>
+            <input type="radio" name="Involvement Type" value="Volunteer" style="display: none;" required>
+          </div>
+          <div class="involvement-card" data-value="Donate">
+            <h3>Donate</h3>
+            <p>Financial support</p>
+            <input type="radio" name="Involvement Type" value="Donate" style="display: none;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Formspree hidden fields -->
+      <input type="hidden" name="_subject" value="New Get Involved Submission">
+      <input type="hidden" name="_language" value="en">
+      
+    <button type="submit" class="submit-btn">Submit Inquiry</button>
+    <style>
+      .submit-btn {
+        background-color: var(--primary-blue, #007bff);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+      .submit-btn:hover,
+      .submit-btn:focus {
+        background-color: #0056b3;
+      }
+    </style>
+    </form>
+  </div>
+
+  <script>
+    // Handle card selection styling and radio selection
+    document.querySelectorAll('.involvement-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        document.querySelectorAll('.involvement-card').forEach(function(c) {
+          c.classList.remove('selected');
+        });
+        this.classList.add('selected');
+        var value = this.getAttribute('data-value');
+        var radio = this.querySelector('input[type="radio"]');
+        if (radio) {
+          radio.checked = true;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

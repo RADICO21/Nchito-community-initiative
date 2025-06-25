@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer with us</title>
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="refocal icon" href="favicon.ico">
+  <style>
+    /* Same CSS as mentor form */
+    .skill-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .skill-option {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Volunteer Application</h1>
+      <p>Join our team of changemakers in Zambia</p>
+    </div>
+
+    <form action="https://formspree.io/f/xldnwbpe" method="POST">
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" name="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone *</label>
+        <input type="tel" name="Phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Location in Zambia</label>
+        <select name="Location">
+          <option value="">Select...</option>
+          <option>Lusaka</option>
+          <option>Copperbelt</option>
+          <option>Southern Province</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Skills/Interests</label>
+        <div class="skill-options">
+          <label class="skill-option"><input type="checkbox" name="Skills" value="Teaching"> Teaching</label>
+          <label class="skill-option"><input type="checkbox" name="Skills" value="Events"> Events</label>
+          <label class="skill-option"><input type="checkbox" name="Skills" value="Graphic Design"> Graphic Design</label>
+          <label class="skill-option"><input type="checkbox" name="Skills" value="Social Media"> Social Media</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Availability *</label>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.5rem;">
+          <label><input type="checkbox" name="Availability" value="Weekdays"> Weekdays</label>
+          <label><input type="checkbox" name="Availability" value="Weekends"> Weekends</label>
+          <label><input type="checkbox" name="Availability" value="Mornings"> Mornings</label>
+          <label><input type="checkbox" name="Availability" value="Afternoons"> Afternoons</label>
+        </div>
+      </div>
+
+      <!-- Formspree hidden fields -->
+      <input type="hidden" name="_subject" value="New Volunteer Application">
+      <input type="hidden" name="_language" value="en">
+      
+        <button type="submit" class="submit-btn">Submit Application</button>
+    <style>
+      .submit-btn {
+        background-color: var(--primary-blue, #007bff);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+      .submit-btn:hover,
+      .submit-btn:focus {
+        background-color: #0056b3;
+      }
+    </style>
+    </form>
+  </div>
+</body>
+</html>

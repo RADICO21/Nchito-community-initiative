@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a partner</title>
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Same base CSS */
+    .partner-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .partner-card {
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .partner-card.selected {
+      border-color: var(--primary-blue);
+      background-color: rgba(0, 123, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Partner With Us</h1>
+      <p>Let's create meaningful impact together</p>
+    </div>
+
+    <form action="https://formspree.io/f/xldnwbpe" method="POST">
+      <div class="form-group">
+        <label>Organization Name *</label>
+        <input type="text" name="Organization Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Contact Person *</label>
+        <input type="text" name="Contact Person" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone *</label>
+        <input type="tel" name="Phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Partnership Type *</label>
+        <div class="partner-type">
+          <div class="partner-card" data-value="Financial">
+            <h3>Financial</h3>
+            <p>Sponsorships/donations</p>
+            <input type="radio" name="Partnership Type" value="Financial" style="display: none;">
+          </div>
+          <div class="partner-card" data-value="In-Kind">
+            <h3>In-Kind</h3>
+            <p>Goods/services</p>
+            <input type="radio" name="Partnership Type" value="In-Kind" style="display: none;">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Tell us about your organization</label>
+        <textarea name="Organization Details" rows="4"></textarea>
+      </div>
+
+      <!-- Formspree hidden fields -->
+      <input type="hidden" name="_subject" value="New Partnership Inquiry">
+      <input type="hidden" name="_language" value="en">
+      
+        <button type="submit" class="submit-btn">Submit</button>
+    <style>
+      .submit-btn {
+        background-color: var(--primary-blue, #007bff);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+      .submit-btn:hover,
+      .submit-btn:focus {
+        background-color: #0056b3;
+      }
+    </style>
+    </form>
+  </div>
+
+  <script>
+    // Handle card selection styling and radio button checking
+    document.querySelectorAll('.partner-card').forEach(card => {
+      card.addEventListener('click', function() {
+        document.querySelectorAll('.partner-card').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        // Check the corresponding radio input
+        const value = this.getAttribute('data-value');
+        const radio = this.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      });
+    });
+  </script>
+</body>
+</html>
